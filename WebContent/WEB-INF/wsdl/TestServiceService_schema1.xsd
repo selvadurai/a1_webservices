@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://webservice/" xmlns:tns="http://webservice/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Product" type="tns:product"/>
+
+  <xs:element name="getProduct" type="tns:getProduct"/>
+
+  <xs:element name="getProductResponse" type="tns:getProductResponse"/>
+
+  <xs:complexType name="getProduct">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getProductResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:product" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="product">
+    <xs:sequence>
+      <xs:element name="ProductID" type="xs:int"/>
+      <xs:element name="ProductName" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
